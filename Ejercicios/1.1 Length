@@ -1,0 +1,17 @@
+local Length LengthB Xs Lista Cont in
+   fun {Length Xs}
+      {LengthB Xs 0}
+   end
+   fun {LengthB Lista Cont}
+      case Lista of H|T then
+	 {LengthB T Cont+1}
+      else
+	 Cont
+      end
+   end
+
+   {Browse {Length [12 3 4 5  5 4 4 3]}}
+
+end
+
+

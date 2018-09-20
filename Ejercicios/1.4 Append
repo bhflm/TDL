@@ -1,0 +1,17 @@
+local Append AppendB Xs Ys B in
+   fun {Append Xs Ys}
+      {AppendB Xs Ys B}
+      B
+   end
+   proc {AppendB Xs Ys B}
+      local Ts in
+	 case Xs of H|T then
+	    {AppendB T Ys Ts}
+	    B  = H|Ts
+	 [] nil then
+	    B = Ys
+	 end
+      end
+   end
+   {Browse {Append [1 2 3] [4 5 6]}}
+end

@@ -1,0 +1,22 @@
+local Drop DropB Xs N Res in
+   fun{Drop Xs N}
+      {DropB Xs N Res}
+      Res
+   end
+   proc{DropB Xs N Res}
+      local Ts in
+	 case Xs of H|T then
+	    if N > 0 then
+	       {DropB T N-1 Res}
+	    else
+	       Res = Xs
+	    end
+	 else
+	    Res = nil
+	 end
+      end
+   end
+   {Browse {Drop [1 2 3 4 5] 0}}
+end
+
+      
