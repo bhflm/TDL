@@ -1,0 +1,21 @@
+local Member Xs Y  B MemberB in
+   fun {Member Xs Y}
+      {MemberB Xs Y B}
+      B
+   end
+   proc {MemberB Xs Y B}
+      case Xs of H|T then
+	 if H == Y then
+	    B = true
+	 else
+	    {MemberB T Y B}
+	 end
+      else
+	 B = false
+      end
+   end
+   {Browse {Member [1 2 3 4] 4}}
+end
+
+      
+	 
