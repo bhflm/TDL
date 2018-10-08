@@ -1,0 +1,17 @@
+local PositionB Position Xs Y Res in
+   fun {Position Xs Y}
+      {PositionB Xs Y 1 Res}
+      Res
+   end
+   proc {PositionB Xs Y Pos Res}
+      if Xs.1 == Y then
+	 Res = Pos
+      else
+	 {PositionB Xs.2 Y Pos+1 Res}
+      end
+   end
+
+   {Browse {Position 1|2|3|4|5|6 6}}
+end
+
+   
