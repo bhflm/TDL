@@ -491,11 +491,27 @@ https://medium.com/@jeff.ethereum/optimising-the-ethereum-virtual-machine-58457e
 
 The nodes send new (unmined) transactions to the rest of the network. The miners collect these then the lucky miner adds as many as they can/want to their new block, which they send to the rest of the network. The nodes receive a new block, verify its validity, and then execute all the transactions in it on their EVM."
 
-*MEMORIA*
+###### *MEMORIA*
+
 hay tres tipos distintos de memoria en solidity:
+
 https://ethereum.stackexchange.com/questions/23720/usage-of-memory-storage-and-stack-areas-in-evm?noredirect=1&lq=1
-storage: es el mas caro de los tres, tiene un costo de 20k gass para setear un espacio de memoria y de 5k gas para cambiar el valor. Esta memeoria es la que se guarda dentro del bloque de la block chain, y por eso su elevado costo. La idea de esta memoria es guardar valor que se quieren mantener constantes entre las distintas ejecuciones del contrato.
-Memory: es relativamente mas barata que el storage, cuesta 3 gas para leer y escribir, y un poco mas de gas para expandir la memoria. El problema es que el costo aumenta de forma cuadratica cuando cuando se requiere mas memoria. Los costos anteriores era para guardar kbs mientras que para un mb de memoria constaria unos millones de gas. A diferencia de el storage, esta memoria es volatil, solo existe en tiempo de ejecucion del contrato.
+
+*Storage:*
+es el mas caro de los tres, tiene un costo de 20000 _gas_ para setear un espacio de memoria y de 5000 _gas_ para cambiar el valor. Esta memeoria es la que se guarda dentro del bloque de la block chain, y por eso su elevado costo. La idea de esta memoria es guardar valores que se quieren mantener constantes entre las distintas ejecuciones del contrato.
+
+```
+string[] storage newItems = items;
+```
+
+*Memory:*
+ Es relativamente mas barata que el storage, cuesta 3 gas para leer y escribir, y un poco mas de gas para expandir la memoria. El problema es que el costo aumenta de forma cuadratica cuando cuando se requiere mas memoria. Los costos anteriores era para guardar kbs mientras que para un mb de memoria constaria unos millones de gas. A diferencia de el storage, esta memoria es volatil, solo existe en tiempo de ejecucion del contrato. La opcion de usar _memory_ crea una copy en lugar de un puntero, de esta menera no se afecta la variable original.
+
+```
+string[] memory newItems = items;
+```
+
+
 Stack: tiene un costo similar al memory, tiene un maximo de 1024 items, pero solo los primeros 16 bloques son accesibles con facilidad. Si un contrato se queda sin memoria en el stack este fallara. Al ser parte fundamental de la ejecucion del contrato lo mejor es no tocarlo y dejar que el compilador se encargue de guardar lo que necesita dentro del stack.
 
 
@@ -580,6 +596,7 @@ https://ethereum.stackexchange.com/questions/23720/usage-of-memory-storage-and-s
 *storage:*
 
  es el mas caro de los tres, tiene un costo de 20k gass para setear un espacio de memoria y de 5k gas para cambiar el valor. Esta memeoria es la que se guarda dentro del bloque de la block chain, y por eso su elevado costo. La idea de esta memoria es guardar valor que se quieren mantener constantes entre las distintas ejecuciones del contrato.
+
 
 
 *Memory:*
