@@ -1,11 +1,6 @@
-asítravés### SOLIDITY
-
-
 // Cosas a mirar : Lazy / Threads / Puertos / ADTS / Wrappers / Estado de contratos
-// Sincronico - Asincronico /
 
-// Por que blockchain usa c++ y etherum usa solidity
-// Comparar contra otros idiomas
+// Falta:  Comparaciones contra otros idiomas - por ej: pq bitcoin usa c++ y etherum solidity
 
 ## Inicios de SOLIDITY
 - Porque se crea y cuales fueron las motivaciones de los creadores
