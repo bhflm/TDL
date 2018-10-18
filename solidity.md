@@ -2,22 +2,28 @@
 
 // Falta:  Comparaciones contra otros idiomas - por ej: pq bitcoin usa c++ y etherum solidity
 
+Solidity
+========
+
 ## Inicios de SOLIDITY
 - Porque se crea y cuales fueron las motivaciones de los creadores
 
-31 de Octubre de 2008 se publica el whitepaper de Bitcoin. El creador, Satoshi lo proponia como una forma de realizar transacciones monetarias transparentes y sin intervenciones de autoridades centralizadas, como un banco.
-
-A medida que paso el tiempo, la gente se fue dando cuenta que se podian usar las mismas ideas de bitcoin para manejar transacciones de distinta indole, no unicamente de dinero.
-
-En 2013, se publica el Whitepaper de Ethereum el cual proponia utilizar la blockchain para almacenar _entidades_
+> 31 de Octubre de 2008 se publica el whitepaper de Bitcoin. El creador, Satoshi lo proponia como una forma de realizar transacciones monetarias transparentes y sin intervenciones de autoridades centralizadas, como un banco.
+>
+> A medida que paso el tiempo, la gente se fue dando cuenta que se podian usar las mismas ideas de bitcoin para manejar transacciones de distinta indole, no unicamente de dinero.
+>
+> En 2013, se publica el Whitepaper de Ethereum el cual proponia utilizar la blockchain para almacenar _entidades_.
 
 ## Características básicas del lenguaje:
-paradigmas que soporta:
-compilado/interpretado:
-tipado
-control de flujos
-tdas
-parámetros o cualquier concepto básico particular que soporte el lenguaje
+
+> Solidity es un lenguaje orientado a contratos, esto lo podríamos llegar pensar como un lenguaje orientado a objetos donde únicamente se puede usar un singleton, es decir una instancia única de nuestro contrato el cual seria nuestro único objeto. Fue influenciado por C++, Python y JavaScript y diseñado para correr en la Etherum Virtual Machine.
+>
+> El mismo es un lenguaje tipado estaticamente y soporta herencia, librerias y tipos complejos definidos por el usuario. 
+
+- compilado/interpretado:
+- control de flujos
+- tdas
+- parámetros o cualquier concepto básico particular que soporte el lenguaje
 
 
 ## Características avanzadas del lenguaje
