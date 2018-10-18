@@ -18,7 +18,9 @@ Solidity
 
 > Solidity es un lenguaje orientado a contratos, esto lo podríamos llegar pensar como un lenguaje orientado a objetos donde únicamente se puede usar un singleton, es decir una instancia única de nuestro contrato el cual seria nuestro único objeto. Fue influenciado por C++, Python y JavaScript y diseñado para correr en la Etherum Virtual Machine.
 >
-> El mismo es un lenguaje tipado estaticamente y soporta herencia, librerias y tipos complejos definidos por el usuario. 
+> El mismo es un lenguaje tipado estaticamente y soporta herencia, librerias y tipos complejos definidos por el usuario.
+>
+> Cada contrato que se desarrolla es compilado en codigo de bytes y luego se corre sobre la Ethereum Virtual Machine.
 
 - compilado/interpretado:
 - control de flujos
@@ -35,21 +37,23 @@ paralelismo
 
 ## Estadísticas de uso del lenguaje, frameworks y la evolución en los últimos años.
 
-##Comparación otros lenguajes similare
+## Comparación otros lenguajes similare
 
-##Se mencionan casos reales indicando el motivo por el cuual se cree o se sabe que se usa el lenguaje
+## Se mencionan casos reales indicando el motivo por el cuual se cree o se sabe que se usa el lenguaje
 
 
 
 ## Concepto de blockchain
-*Bloques*
 
-Bloque génesis es el primer bloque de la cadena el cual se genera cuando se  instancia el contrato por primera vez
+### Bloques
 
-*Privacidad y Transparencia*
+> Bloque génesis es el primer bloque de la cadena el cual se genera cuando se  instancia el contrato por primera vez.
+>
+> Cada bloque almacena, las variables del contrato en el estado que se encontraban al generear este bloque, el hash de si mismo el cual se generea a partir de la informacion que tiene el mismo, el hash del bloque anterior.
 
-Cada uno de los bloques pueden ser observados por cada una de las personas que forman parte de la red, lo cual le aporta un grado de transparencia muy alto a cualquier transacción que se realice
-Al estar totalmente codificada, la blockchain el uso de la blockchain es anónimo y privado.
+### Privacidad y Transparencia
+
+> Cada uno de los bloques pueden ser observados por cada una de las personas que forman parte de la red, lo cual le aporta un grado de transparencia muy alto a cualquier transacción que se realice. Al estar totalmente codificada, la blockchain el uso de la blockchain es anónimo y privado.
 
 
 
