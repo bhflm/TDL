@@ -617,6 +617,26 @@ https://ethereum.stackexchange.com/questions/23720/usage-of-memory-storage-and-s
 
 La etherum virtual machine se encuentra completamente aislada lo que significa que el codigo corre dentro de la virtual machine y no tiene acceso a la red, ni al sistema de archivos ni a ningun otro proceso. Esto le suma un cierto nivel de seguridad a los contratos que corran sobre la virtual machine. A pesar de que ir contra la filosofia del blockchain existe una herramienta llamada oraclize la cual podríamos visualizarla como un puente al exterior ya que a través de esta podemos hacer llamados a diferentes paginas y apis como asi también a otras librerias.
 
+## Tipos de variables no convencionales
 
-Manejo de CPU
-Comparación con EOS
+### Address
+
+> El tipo address es un valor de 160 bits que no permite operaciones aritmeticas, y debe ser usado para almazenar dirrecciones de contratos o pares de claves pertenecientes a presonas externas.
+
+### Mapping
+
+> Este tipo mapea un tipo de variables a otro tipo de variables, es decir por ejemplo mapping(address => uing) mapea direcciones a enteros sin signo. Este tipo de variable puede ser visto como una tabla de hash inicializada de forma tal que cada clave existe y es mapeada a un valor cuya representacion en bytes es todo ceros
+
+
+## Variables globales magicas
+
+### msg
+
+> Contiene propiedades que permiten el acceso a la blockchain, por ejemplo msg.sender es siempre la direccion desde donde se origina la llamada a la funcion actual.
+
+### block
+
+> Contiene informacion del bloque actual, por ejemplo block.gaslimit es el limite de gas que tiene el bloque actual
+
+### tx
+> Contiene informacion de la transaccion, por ejemplo tx.gasprice es el precio en gas de la transaccion.
